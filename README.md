@@ -27,9 +27,9 @@ Os desafios estão organizados nas seguintes categorias, conforme o roteiro ofic
 
 | # | Título Original | Título em Português | Dificuldade |
 |---|----------------|----------------------|-------------|
-| 01 | Welcome to Java! | [Bem-vindo ao Java!](./introducao/bem-vindo-ao-java/) | Fácil |
-| 02 | Java Output Formatting | [Formatação de Saída em Java](./introducao/formatacao-de-saida-em-java/) | Fácil |
-| 03 | Java If-Else | [If-Else em Java](./introducao/if-else-em-java/) | Fácil |
+| 01 | Welcome to Java! ✓ | [Bem-vindo ao Java!](./introducao/bem-vindo-ao-java/) | Fácil |
+| 02 | Java Output Formatting ✓ | [Formatação de Saída em Java](./introducao/formatacao-de-saida-em-java/) | Fácil |
+| 03 | Java If-Else ✓ | [If-Else em Java](./introducao/if-else-em-java/) | Fácil |
 | 04 | Java Stdin and Stdout I | [Entrada e Saída Padrão em Java I](./introducao/entrada-e-saida-padrao-I/) | Fácil |
 | 05 | Java Stdin and Stdout II | [Entrada e Saída Padrão em Java II](./introducao/entrada-e-saida-padrao-II/) | Fácil |
 | 06 | Java Loops I | [Laços de Repetição em Java I](./introducao/lacos-de-repeticao-I/) | Fácil |
