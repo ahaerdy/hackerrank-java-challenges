@@ -62,6 +62,24 @@ Existem $3$ linhas de entrada, e cada linha contém um único inteiro.
 
 ## Template Inicial do Desafio
 
+```java
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        // Complete this line
+        // Complete this line
+
+        System.out.println(a);
+        // Complete this line
+        // Complete this line
+    }
+}
+```
+
 ## Solução
 
 ```java
@@ -86,5 +104,5 @@ public class Solution {
 ### Saída no Console
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-06-04-14-07-38.png" alt="" width="480">
+  <img src="000-Midia_e_Anexos/2026-06-04-14-07-38.png" alt="" width="100%">
 </p>
