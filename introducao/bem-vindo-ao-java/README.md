@@ -1,7 +1,5 @@
 # Bem-vindo ao Java!
 
-# Welcome to the world of Java!
-
 Bem-vindo ao mundo do Java! Neste desafio, praticamos a impressão no `stdout`.
 
 Os stubs de código em seu editor declaram uma classe `Solution` e um método `main`. Complete o método `main` copiando as duas linhas de código abaixo e colando-as dentro do corpo do seu método `main`.
