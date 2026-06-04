@@ -160,7 +160,7 @@ Essa percepção de que "deve ser na mesma linha" geralmente acontece por dois m
 1. **Uso misto com `nextLine()`:** Se o seu código tivesse um `scan.nextLine()` logo após um `nextInt()`, o comportamento quebraria ao usar o `<Enter>`. Isso ocorre porque o `nextInt()` consome o número mas **deixa a quebra de linha (`\n`) para trás no buffer**. O `nextLine()` subsequente capturaria essa quebra de linha vazia imediatamente, parecendo que o programa "pulou" uma leitura. Como o seu código só usa `nextInt()`, esse problema não acontece.
 2. **Plataformas de Desafios (como HackerRank ou Beecrowd):** Muitas vezes os exemplos de entrada de dados (*Input Format*) desses sites são ilustrados em uma única linha de texto para economizar espaço na tela, induzindo o desenvolvedor a achar que o código só funciona daquela forma estrita.
 
-Em resumo: seu código está robusto e pronto para tratar os números de ambas as formas!
+Em resumo: o código está robusto e pronto para tratar os números de ambas as formas.
 
 ---
 
