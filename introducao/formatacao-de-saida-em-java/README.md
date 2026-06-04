@@ -1,4 +1,6 @@
-# Lendo da Entrada Padrão (stdin)
+# Formatação de Saída em Java
+
+## Lendo da Entrada Padrão (stdin)
 
 A maioria dos desafios do HackerRank exige que você leia a entrada a partir de `stdin` (entrada padrão) e escreva a saída em `stdout` (saída padrão).
 
@@ -104,5 +106,5 @@ public class Solution {
 ### Saída no Console
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-06-04-14-07-38.png" alt="" width="100%">
+  <img src="000-Midia_e_Anexos/2026-06-04-14-21-05.png" alt="" width="100%">
 </p>
