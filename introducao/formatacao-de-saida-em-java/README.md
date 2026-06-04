@@ -1,31 +1,60 @@
-# Formatação de Saída em Java
+# Lendo da Entrada Padrão (stdin)
 
-Bem-vindo ao mundo do Java! Neste desafio, praticamos a impressão no `stdout`.
+A maioria dos desafios do HackerRank exige que você leia a entrada a partir de `stdin` (entrada padrão) e escreva a saída em `stdout` (saída padrão).
 
-Os stubs de código em seu editor declaram uma classe `Solution` e um método `main`. Complete o método `main` copiando as duas linhas de código abaixo e colando-as dentro do corpo do seu método `main`.
+Uma maneira popular de ler a entrada de `stdin` é usando a classe `Scanner` e especificando o fluxo de entrada como `System.in`. Por exemplo:
 
 ```java
-System.out.println("Hello, World.");
-System.out.println("Hello, Java.");
+Scanner scanner = new Scanner(System.in);
+String myString = scanner.next();
+int myInt = scanner.nextInt();
+scanner.close();
+
+System.out.println("myString is: " + myString);
+System.out.println("myInt is: " + myInt);
 
 ```
 
+O código acima cria um objeto `Scanner` e o utiliza para ler uma `String` e um `int`. Em seguida, ele fecha o objeto `Scanner` porque não há mais entrada a ser lida, e imprime no `stdout` usando `System.out.println(String).` Portanto, se a nossa entrada for:
+
+```text
+Hi 5
+
+```
+
+O nosso código irá imprimir:
+
+```text
+myString is: Hi
+myInt is: 5
+
+```
+
+Alternativamente, você pode usar a classe `BufferedReader`.
+
+## Tarefa
+
+Neste desafio, você deve ler $3$ inteiros de `stdin` e, em seguida, imprimi-los em `stdout`. Cada inteiro deve ser impresso em uma nova linha. Para tornar o problema um pouco mais fácil, uma parte do código já é fornecida para você no editor abaixo.
+
 ## Formato de Entrada
 
-Não existe entrada para este desafio.
+Existem $3$ linhas de entrada, e cada linha contém um único inteiro.
 
-## Formato de Saída
+## Exemplo de Entrada
 
-A saída deverá exibir as duas linhas abaixo:
+```text
+42
+100
+125
 
-1. `Hello, World.` na primeira linha.
-2. `Hello, Java.` na segunda linha.
+```
 
 ## Exemplo de Saída
 
 ```text
-Hello, World.
-Hello, Java.
+42
+100
+125
 
 ```
 
@@ -33,26 +62,23 @@ Hello, Java.
 
 ## Template Inicial do Desafio
 
+## Solução
+
 ```java
+import java.util.*;
+
 public class Solution {
 
     public static void main(String[] args) {
-        /* Enter your code here. Print output to STDOUT. Your class should be named Solution. */
-    }
-}
-```
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        int c = scan.nextInt();
+        scan.close();
 
---- 
-
-## ✅ Solução
-
-```java
-public class Solution {
-
-    public static void main(String[] args) {
-        /* Enter your code here. Print output to STDOUT. Your class should be named Solution. */
-        System.out.println("Hello, World.");
-        System.out.println("Hello, Java.");
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
     }
 }
 ```
@@ -60,5 +86,5 @@ public class Solution {
 ### Saída no Console
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-06-04-14-07-38.png" alt="" width="1024">
+  <img src="000-Midia_e_Anexos/2026-06-04-14-07-38.png" alt="" width="480">
 </p>
