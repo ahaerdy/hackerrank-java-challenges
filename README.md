@@ -1,4 +1,4 @@
-# ☕ Desafios de Programação em Java — HackerRank
+# ☕ Desafios de Programação em Java
 
 Repositório dedicado à resolução dos desafios de Java da plataforma [HackerRank](https://www.hackerrank.com/domains/java), com soluções comentadas e organizadas por categoria.
 
