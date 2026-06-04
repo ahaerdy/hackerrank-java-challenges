@@ -44,7 +44,7 @@ public class Solution {
 
 --- 
 
-## Solução
+## ✅ Solução
 
 ```java
 public class Solution {
@@ -56,3 +56,9 @@ public class Solution {
     }
 }
 ```
+
+### Captura de tela
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-06-04-14-07-38.png" alt="" width="1024">
+</p>
