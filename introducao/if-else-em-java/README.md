@@ -3,7 +3,7 @@
 Neste desafio, testamos seu conhecimento no uso de estruturas condicionais `if-else` para automatizar processos de tomada de decisão. Uma condicional `if-else` possui o seguinte fluxo lógico:
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-06-04-15-12-53.png" alt="" width="480">
+  <img src="000-Midia_e_Anexos/2026-06-04-15-14-18.png" alt="" width="480">
 </p>
 
 ## Tarefa
