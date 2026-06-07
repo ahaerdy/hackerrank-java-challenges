@@ -2,6 +2,10 @@
 
 Repositório dedicado à resolução dos desafios de Java da plataforma [HackerRank](https://www.hackerrank.com/domains/java), com soluções comentadas e organizadas por categoria.
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-06-07-14-18-43.png" alt="" width="480">
+</p>
+
 ---
 
 ## 📌 Sobre este repositório
