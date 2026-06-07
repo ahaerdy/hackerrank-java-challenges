@@ -1,4 +1,4 @@
-# Entrada-e-Saída-Padrão-I
+# Entrada e Saída Padrão I
 
 ## Lendo da Entrada Padrão (stdin)
 
