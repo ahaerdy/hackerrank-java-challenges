@@ -4,11 +4,9 @@ Utilizamos os inteiros $a$, $b$ e $n$ para criar a seguinte série:
 
 $$(a + 2^0 \cdot b), (a + 2^0 \cdot b + 2^1 \cdot b), \ldots, (a + 2^0 \cdot b + 2^1 \cdot b + \ldots + 2^{n-1} \cdot b)$$
 
-Você receberá $q$ consultas (queries) no formato de $a$, $b$ e $n$. Para cada consulta, imprima a série correspondente aos valores dados de $a$, $b$ e $n$ como uma única linha de $n$ inteiros separados por espaço.
-
 ## Formato de Entrada
 
-A primeira linha contém um inteiro, $q$, denotando o número de consultas.  
+A primeira linha contém um inteiro, $q$, denotando o número de seŕies.  
 Cada linha $i$ das $q$ linhas subsequentes contém três inteiros separados por espaço que descrevem os respectivos valores de $a_i$, $b_i$ e $n_i$ para aquela consulta.
 
 ## Restrições
