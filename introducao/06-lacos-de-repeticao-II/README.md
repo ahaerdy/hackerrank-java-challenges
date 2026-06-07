@@ -47,6 +47,7 @@ Temos duas consultas:
 * $s_1 = 0 + 1 \cdot 2 + 2 \cdot 2 = 6$
 * $s_2 = 0 + 1 \cdot 2 + 2 \cdot 2 + 4 \cdot 2 = 14$
 * ... e assim por diante.
+
 Ao atingirmos $n = 10$, imprimimos os primeiros dez termos como uma única linha de inteiros separados por espaço.
 
 
@@ -56,4 +57,5 @@ Ao atingirmos $n = 10$, imprimimos os primeiros dez termos como uma única linha
 * $s_2 = 5 + 1 \cdot 3 + 2 \cdot 3 + 4 \cdot 3 = 26$
 * $s_3 = 5 + 1 \cdot 3 + 2 \cdot 3 + 4 \cdot 3 + 8 \cdot 3 = 50$
 * $s_4 = 5 + 1 \cdot 3 + 2 \cdot 3 + 4 \cdot 3 + 8 \cdot 3 + 16 \cdot 3 = 98$
+
 Em seguida, imprimimos cada elemento da nossa série como uma única linha de valores separados por espaço.
