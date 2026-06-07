@@ -27,11 +27,11 @@ Os desafios estão organizados nas seguintes categorias, conforme o roteiro ofic
 
 | # | Título Original | Título em Português | Dificuldade |
 |---|----------------|----------------------|-------------|
-| 01 | Welcome to Java! ✓ | [Bem-vindo ao Java!](./introducao/bem-vindo-ao-java/) | Fácil |
-| 02 | Java Output Formatting ✓ | [Formatação de Saída em Java](./introducao/formatacao-de-saida-em-java/) | Fácil |
-| 03 | Java If-Else ✓ | [If-Else em Java](./introducao/if-else-em-java/) | Fácil |
-| 04 | Java Stdin and Stdout I | [Entrada e Saída Padrão em Java I](./introducao/entrada-e-saida-padrao-I/) | Fácil |
-| 05 | Java Stdin and Stdout II | [Entrada e Saída Padrão em Java II](./introducao/entrada-e-saida-padrao-II/) | Fácil |
+| 01 | Welcome to Java! ✓ | [Bem-vindo ao Java!](./introducao/01-bem-vindo-ao-java/) | Fácil |
+| 02 | Java Output Formatting ✓ | [Entrada e Saída Padrão em Java I](./introducao/02-entrada-e-saida-padrao-I/) | Fácil |
+| 03 | Java If-Else ✓ | [If-Else em Java](./03-introducao/03-if-else-em-java/) | Fácil |
+| 04 | Java Stdin and Stdout II | [Entrada e Saída Padrão em Java II](./introducao/04-entrada-e-saida-padrao-II/) | Fácil |
+| 05 | Java Loops I | [Laços de Repetição em Java I](./introducao/03-lacos-de-repeticao-I/) | Fácil |/) | Fácil |
 | 06 | Java Loops I | [Laços de Repetição em Java I](./introducao/lacos-de-repeticao-I/) | Fácil |
 | 07 | Java Loops II | [Laços de Repetição em Java II](./introducao/lacos-de-repeticao-II/) | Fácil |
 | 08 | Java Datatypes | [Tipos de Dados em Java](./introducao/tipos-de-dados-em-java/) | Fácil |
