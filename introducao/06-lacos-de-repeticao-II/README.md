@@ -153,3 +153,8 @@ Isso evita que precisemos usar métodos mais pesados como `Math.pow(2, j)`, que 
 
 
 ## Console
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-06-07-11-11-22.png" alt="" width="100%">
+</p>
+
