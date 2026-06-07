@@ -57,7 +57,7 @@ public class Solution {
 }
 ```
 
-### Saída no Console
+### Console
 
 <p align="center">
   <img src="000-Midia_e_Anexos/2026-06-04-14-07-38.png" alt="" width="100%">

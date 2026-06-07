@@ -129,7 +129,7 @@ public class Solution {
 }
 ```
 
-### Saídas no Console
+### Console
 
 #### 🔹n = 3
 
