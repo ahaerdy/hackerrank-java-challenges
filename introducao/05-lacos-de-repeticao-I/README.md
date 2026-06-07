@@ -130,3 +130,7 @@ Dentro do laço, calculamos o `resultado` multiplicando `N` por `i`.
 A linha mais importante para a validação do desafio é o `System.out.println`. O avaliador automático compara caractere por caractere da sua saída com o gabarito. Por isso, usamos o operador de concatenação `+` para juntar variáveis e textos fixos, garantindo os espaços exatos antes e depois do caractere `" x "` e do sinal de `"="`.
 
 ## Console
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-06-07-10-18-42.png" alt="" width="100%">
+</p>
