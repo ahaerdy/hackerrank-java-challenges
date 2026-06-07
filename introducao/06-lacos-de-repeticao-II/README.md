@@ -7,7 +7,7 @@ $$(a + 2^0 \cdot b), (a + 2^0 \cdot b + 2^1 \cdot b), \ldots, (a + 2^0 \cdot b +
 ## Formato de Entrada
 
 A primeira linha deverá informar um inteiro, $q$, denotando o número de séries.  
-Cada linha $i$ das $q$ linhas subsequentes contém três inteiros separados por espaço que descrevem os respectivos valores de $a_i$, $b_i$ e $n_i$ para aquela consulta.
+Cada linha $i$ das $q$ linhas subsequentes contém três inteiros separados por espaço que descrevem os respectivos valores de $a_i$, $b_i$ e $n_i$ para aquela série.
 
 ## Restrições
 
