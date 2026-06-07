@@ -98,6 +98,8 @@ public class Solution {
 
 ```
 
+### Detalhamento
+
 O objetivo deste desafio é gerar a tabuada de um número inteiro $N$ fornecido pela plataforma, limitando-se aos multiplicadores de 1 a 10.
 
 ### 1. Leitura da Entrada
