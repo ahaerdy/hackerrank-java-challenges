@@ -196,3 +196,9 @@ Se um número for `-150`:
 * Entra no `if` do `long` $\rightarrow$ Imprime `* long`
 
 O fluxo garante a ordenação e a precisão exigidas pela saída do problema.
+
+## Console
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-06-08-19-20-23.png" alt="" width="100%">
+</p>
