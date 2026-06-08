@@ -37,8 +37,8 @@ Os desafios estão organizados nas seguintes categorias, conforme o roteiro ofic
 | 04 | Java Stdin and Stdout II ✓ | [Entrada e Saída Padrão em Java II](./introducao/04-entrada-e-saida-padrao-II/) | Fácil |
 | 05 | Java Loops I ✓ | [Laços de Repetição em Java I](./introducao/05-lacos-de-repeticao-I/) | Fácil |/) | Fácil |
 | 06 | Java Loops II ✓ | [Laços de Repetição em Java II](./introducao/06-lacos-de-repeticao-II/) | Fácil |
-| 07 | Java Datatypes | [Tipos de Dados em Java](./introducao/tipos-de-dados-em-java/) | Fácil |
-| 08 | Java End-of-file | [Fim de Arquivo em Java](./introducao/fim-de-arquivo-em-java/) | Fácil |
+| 07 | Java Datatypes ✓ | [Tipos de Dados em Java](./introducao/07-tipos-de-dados-em-java/) | Fácil |
+| 08 | Java End-of-file | [Fim de Arquivo em Java](./introducao/08-fim-de-arquivo-em-java/) | Fácil |
 | 09 | Java Static Initializer Block | [Bloco Inicializador Estático em Java](./introducao/bloco-inicializador-estatico/) | Fácil |
 | 10 | Java Int to String | [Inteiro para String em Java](./introducao/inteiro-para-string/) | Fácil |
 | 11 | Java Date and Time | [Data e Hora em Java](./introducao/data-e-hora-em-java/) | Fácil |
