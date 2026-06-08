@@ -10,17 +10,17 @@ Neste desafio, vamos focar nos tipos que armazenam números inteiros: `byte`, `s
 
 Sua tarefa é determinar quais desses tipos primitivos podem armazenar corretamente um número inteiro fornecido.
 
-Mais detalhes podem ser encontrados na documentação oficial da Oracle [(docs.oracle.com in Bing)](https://www.bing.com/search?q="https%3A%2F%2Fdocs.oracle.com%2Fjavase%2Ftutorial%2Fjava%2Fnutsandbolts%2Fdatatypes.html").
+Mais detalhes podem ser encontrados na documentação oficial da Oracle [(docs.oracle.com)](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html).
 
 ## Formato de Entrada
 
-- A primeira linha contém um inteiro `T`, representando o número de casos de teste.  
+- A primeira linha deve receber um inteiro `t`, representando o número de casos de teste.  
 - Cada caso de teste consiste em uma única linha contendo um inteiro `n`, que pode ser arbitrariamente grande ou pequeno.
 
 ## Formato de Saída
 
 Para cada número de entrada `n`, você deve determinar se os tipos primitivos são capazes de armazená-lo.  
-Se sim, imprima:
+Se sim, imprima o seguinte:
 
 ```
 n can be fitted in:
@@ -111,64 +111,87 @@ import java.io.*;
 
 class Solution {
     public static void main(String []argh) {
+        // Inicializa o Scanner para ler a entrada padrão (teclado/arquivo de teste)
         Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt(); // Lê o número de casos de teste
+        
+        // Lê a quantidade de casos de teste (t)
+        int t = sc.nextInt();
 
+        // Loop para processar cada caso de teste individualmente
         for (int i = 0; i < t; i++) {
             try {
-                long x = sc.nextLong(); // Tenta ler o número como long
+                // Tenta ler o próximo número diretamente como um tipo 'long' (64 bits).
+                // Se o número for maior que o limite de um long (ou menor), 
+                // o Scanner lançará uma exceção 'InputMismatchException', disparando o bloco catch.
+                long x = sc.nextLong();
+                
+                // Se chegou aqui, o número cabe pelo menos em um 'long'
                 System.out.println(x + " can be fitted in:");
-
-                // Verifica se cabe em byte (-128 a 127)
-                if (x >= -128 && x <= 127) System.out.println("* byte");
-
-                // Verifica se cabe em short (-32768 a 32767)
-                if (x >= -32768 && x <= 32767) System.out.println("* short");
-
-                // Verifica se cabe em int (-2^31 a 2^31 - 1)
-                if (x >= -2147483648 && x <= 2147483647) System.out.println("* int");
-
-                // Verifica se cabe em long (-2^63 a 2^63 - 1)
-                if (x >= -9223372036854775808L && x <= 9223372036854775807L) System.out.println("* long");
-
+                
+                // Verifica os limites do tipo 'byte' (8 bits: -128 a 127)
+                if (x >= Byte.MIN_VALUE && x <= Byte.MAX_VALUE) {
+                    System.out.println("* byte");
+                }
+                
+                // Verifica os limites do tipo 'short' (16 bits: -32.768 a 32.767)
+                if (x >= Short.MIN_VALUE && x <= Short.MAX_VALUE) {
+                    System.out.println("* short");
+                }
+                
+                // Verifica os limites do tipo 'int' (32 bits: -2.147.483.648 a 2.147.483.647)
+                if (x >= Integer.MIN_VALUE && x <= Integer.MAX_VALUE) {
+                    System.out.println("* int");
+                }
+                
+                // Como o sc.nextLong() não estourou, o número com certeza cabe em um 'long' (64 bits)
+                if (x >= Long.MIN_VALUE && x <= Long.MAX_VALUE) {
+                    System.out.println("* long");
+                }
+                
             } catch (Exception e) {
-                // Caso o número seja grande demais para caber em long
+                // Se o número digitado ultrapassou os limites do tipo 'long' (estouro de bits),
+                // sc.nextLong() falha. Capturamos o token inválido usando sc.next() para exibi-lo.
                 System.out.println(sc.next() + " can't be fitted anywhere.");
             }
         }
+        
+        sc.close(); // Boa prática: fecha o scanner após o uso
     }
 }
 ```
 
-### Detalhamento
+## Explicação Detalhada do Código
 
-1. **Leitura dos casos de teste**  
-   A primeira linha da entrada contém `t`, o número de casos de teste. O programa usa um laço `for` para processar cada número.
+O desafio central deste exercício é lidar com **estouro de capacidade (overflow/underflow)** e entender como a arquitetura do Java gerencia os tipos inteiros primitivos.
 
-2. **Uso de `try-catch`**  
-   - Dentro do `try`, o programa tenta ler o número como `long`.  
-   - Se o número for maior que o limite de `long`, ocorre uma exceção, e o `catch` imprime que o valor não pode ser armazenado em nenhum tipo primitivo.
+### 1. A Estratégia de Captura com `try-catch`
 
-3. **Verificação dos intervalos**  
-   - Cada tipo primitivo tem um intervalo fixo:
-     - `byte`: -128 a 127  
-     - `short`: -32.768 a 32.767  
-     - `int`: -2.147.483.648 a 2.147.483.647  
-     - `long`: -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807  
-   - O programa compara o valor `x` com esses limites e imprime todos os tipos nos quais ele cabe.
+A maior armadilha desse problema está nos números que não cabem nem mesmo no maior tipo primitivo inteiro disponível (`long`).
 
-4. **Saída formatada**  
-   - Se o número cabe em algum tipo, imprime:
-     ```
-     n can be fitted in:
-     * tipo
-     ```
-   - Se não cabe em nenhum, imprime:
-     ```
-     n can't be fitted anywhere.
-     ```
+* Se tentássemos ler a entrada como uma string simples ou um `BigInteger` para fazer todas as validações manualmente, gastaríamos mais processamento e linhas de código.
+* Em vez disso, usamos o próprio comportamento do `Scanner`. O método `sc.nextLong()` tenta converter a entrada em um inteiro de 64 bits. Se o número for absurdamente grande (como `213333333333333333333333333333333333`), a leitura falha imediatamente e o fluxo é desviado para o bloco `catch`.
+* No `catch`, usamos `sc.next()` para recuperar o "token" (o texto do número gigante) que o `nextLong()` rejeitou e imprimimos a mensagem padrão de erro.
 
----
+### 2. Uso das Classes Wrapper (`Byte`, `Short`, `Integer`, `Long`)
 
+No template inicial do desafio, o exemplo trazia valores fixos literais: `if(x>=-128 && x<=127)`. Embora correto para o `byte`, decorar ou digitar manualmente os valores máximos e mínimos de `int` e `long` é propenso a erros de digitação.
 
-## Console
+Para tornar o código limpo, profissional e legível, utilizamos as **Constantes Embutidas** das classes utilitárias do Java:
+
+* `Byte.MIN_VALUE` (-128) e `Byte.MAX_VALUE` (127)
+* `Short.MIN_VALUE` (-32768) e `Short.MAX_VALUE` (32767)
+* `Integer.MIN_VALUE` ($-2^{31}$) e `Integer.MAX_VALUE` ($2^{31} - 1$)
+* `Long.MIN_VALUE` ($-2^{63}$) e `Long.MAX_VALUE` ($2^{63} - 1$)
+
+### 3. Estrutura de Condicionais Independentes
+
+Note que **não** utilizamos `else if`. Como o enunciado exige que listemos *todos* os tipos nos quais o número se encaixa, em ordem crescente de tamanho, precisamos testar cada limite de forma independente.
+
+Se um número for `-150`:
+
+* Não entra no `if` do `byte`.
+* Entra no `if` do `short` $\rightarrow$ Imprime `* short`
+* Entra no `if` do `int` $\rightarrow$ Imprime `* int`
+* Entra no `if` do `long` $\rightarrow$ Imprime `* long`
+
+O fluxo garante a ordenação e a precisão exigidas pela saída do problema.
