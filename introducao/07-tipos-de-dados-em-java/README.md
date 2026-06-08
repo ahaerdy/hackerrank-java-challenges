@@ -63,3 +63,54 @@ n can't be fitted anywhere.
 -100000000000000 can be fitted in:
 * long
 ```
+
+## Explicação
+
+- O número `-150` pode ser armazenado em um `short`, em um `int` ou em um `long`.  
+- O número `2133333333333333333333333333333333333333` é extremamente grande e está fora do intervalo permitido para os tipos primitivos discutidos neste problema.  
+- Já o número `-100000000000000` cabe dentro de um `long`, mas não em `int`, `short` ou `byte`.
+
+Essa análise mostra como diferentes tipos primitivos em Java possuem limites distintos de armazenamento, e por isso é necessário verificar cuidadosamente em qual intervalo cada número se encaixa.
+
+## Template Inicial do Desafio
+
+```java
+import java.util.*;
+import java.io.*;
+
+
+
+class Solution{
+    public static void main(String []argh)
+    {
+
+
+
+        Scanner sc = new Scanner(System.in);
+        int t=sc.nextInt();
+
+        for(int i=0;i<t;i++)
+        {
+
+            try
+            {
+                long x=sc.nextLong();
+                System.out.println(x+" can be fitted in:");
+                if(x>=-128 && x<=127)System.out.println("* byte");
+                //Complete the code
+            }
+            catch(Exception e)
+            {
+                System.out.println(sc.next()+" can't be fitted anywhere.");
+            }
+
+        }
+    }
+}
+```
+
+## Solução
+
+
+
+## Console
