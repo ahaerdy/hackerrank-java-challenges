@@ -105,6 +105,70 @@ class Solution{
 
 ## Solução
 
+```java
+import java.util.*;
+import java.io.*;
+
+class Solution {
+    public static void main(String []argh) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt(); // Lê o número de casos de teste
+
+        for (int i = 0; i < t; i++) {
+            try {
+                long x = sc.nextLong(); // Tenta ler o número como long
+                System.out.println(x + " can be fitted in:");
+
+                // Verifica se cabe em byte (-128 a 127)
+                if (x >= -128 && x <= 127) System.out.println("* byte");
+
+                // Verifica se cabe em short (-32768 a 32767)
+                if (x >= -32768 && x <= 32767) System.out.println("* short");
+
+                // Verifica se cabe em int (-2^31 a 2^31 - 1)
+                if (x >= -2147483648 && x <= 2147483647) System.out.println("* int");
+
+                // Verifica se cabe em long (-2^63 a 2^63 - 1)
+                if (x >= -9223372036854775808L && x <= 9223372036854775807L) System.out.println("* long");
+
+            } catch (Exception e) {
+                // Caso o número seja grande demais para caber em long
+                System.out.println(sc.next() + " can't be fitted anywhere.");
+            }
+        }
+    }
+}
+```
+
+### Detalhamento
+
+1. **Leitura dos casos de teste**  
+   A primeira linha da entrada contém `t`, o número de casos de teste. O programa usa um laço `for` para processar cada número.
+
+2. **Uso de `try-catch`**  
+   - Dentro do `try`, o programa tenta ler o número como `long`.  
+   - Se o número for maior que o limite de `long`, ocorre uma exceção, e o `catch` imprime que o valor não pode ser armazenado em nenhum tipo primitivo.
+
+3. **Verificação dos intervalos**  
+   - Cada tipo primitivo tem um intervalo fixo:
+     - `byte`: -128 a 127  
+     - `short`: -32.768 a 32.767  
+     - `int`: -2.147.483.648 a 2.147.483.647  
+     - `long`: -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807  
+   - O programa compara o valor `x` com esses limites e imprime todos os tipos nos quais ele cabe.
+
+4. **Saída formatada**  
+   - Se o número cabe em algum tipo, imprime:
+     ```
+     n can be fitted in:
+     * tipo
+     ```
+   - Se não cabe em nenhum, imprime:
+     ```
+     n can't be fitted anywhere.
+     ```
+
+---
 
 
 ## Console
